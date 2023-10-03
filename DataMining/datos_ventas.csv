@@ -1,0 +1,501 @@
+Fecha,Producto,Categoría,Municipio,Vendedor,Ventas,UnidadesVendidas
+2021-11,Jugo de Naranja,Bebidas,Zacatecas,Ana,69,29
+2021-12,Leche,Lácteos,Jerez,Héctor,124,100
+2021-12,Leche,Lácteos,Tlaltenango,Francisco,101,66
+2021-07,Pan,Panadería,Guadalupe,Nora,52,29
+2021-05,Pan,Panadería,Guadalupe,Clauido,141,52
+2021-12,Leche,Lácteos,Jerez,Clauido,50,97
+2021-06,Manzana,Frutas,Fresnillo,Nora,58,35
+2021-12,Manzana,Frutas,Zacatecas,Héctor,125,52
+2021-07,Jugo de Naranja,Bebidas,Guadalupe,Héctor,161,38
+2021-04,Jugo de Naranja,Bebidas,Jerez,Clauido,185,73
+2021-12,Manzana,Frutas,Zacatecas,Francisco,98,70
+2021-04,Pan,Panadería,Zacatecas,Héctor,178,36
+2021-12,Manzana,Frutas,Jerez,Clauido,108,43
+2021-05,Jugo de Naranja,Bebidas,Zacatecas,Nora,119,81
+2021-06,Manzana,Frutas,Tlaltenango,Clauido,125,43
+2021-12,Manzana,Frutas,Tlaltenango,Clauido,152,51
+2021-10,Platano,Frutas,Zacatecas,Clauido,98,81
+2021-01,Leche,Lácteos,Tlaltenango,Francisco,112,34
+2021-10,Pan,Panadería,Jerez,Héctor,71,25
+2021-10,Manzana,Frutas,Jerez,Clauido,93,56
+2021-09,Pan,Panadería,Tlaltenango,Francisco,161,86
+2021-10,Platano,Frutas,Fresnillo,Héctor,93,72
+2021-01,Manzana,Frutas,Guadalupe,Francisco,160,68
+2021-06,Manzana,Frutas,Tlaltenango,Nora,185,47
+2021-08,Platano,Frutas,Jerez,Nora,195,61
+2021-09,Jugo de Naranja,Bebidas,Guadalupe,Clauido,125,80
+2021-01,Pan,Panadería,Tlaltenango,Francisco,75,79
+2021-07,Leche,Lácteos,Jerez,Ana,131,76
+2021-12,Manzana,Frutas,Fresnillo,Clauido,167,29
+2021-10,Manzana,Frutas,Tlaltenango,Francisco,132,55
+2021-12,Leche,Lácteos,Jerez,Francisco,55,48
+2021-01,Platano,Frutas,Fresnillo,Ana,138,58
+2021-04,Manzana,Frutas,Guadalupe,Ana,89,87
+2021-01,Manzana,Frutas,Guadalupe,Clauido,193,34
+2021-12,Platano,Frutas,Guadalupe,Ana,162,63
+2021-02,Platano,Frutas,Zacatecas,Clauido,51,65
+2021-03,Leche,Lácteos,Tlaltenango,Clauido,144,50
+2021-03,Leche,Lácteos,Tlaltenango,Ana,150,22
+2021-08,Leche,Lácteos,Guadalupe,Nora,142,43
+2021-06,Pan,Panadería,Guadalupe,Clauido,76,87
+2021-01,Platano,Frutas,Jerez,Ana,130,34
+2021-07,Jugo de Naranja,Bebidas,Jerez,Ana,101,31
+2021-03,Pan,Panadería,Tlaltenango,Ana,181,24
+2021-09,Pan,Panadería,Fresnillo,Clauido,70,81
+2021-01,Leche,Lácteos,Zacatecas,Clauido,168,67
+2021-09,Leche,Lácteos,Zacatecas,Francisco,91,25
+2021-06,Pan,Panadería,Fresnillo,Ana,197,100
+2021-07,Jugo de Naranja,Bebidas,Jerez,Ana,84,57
+2021-09,Leche,Lácteos,Zacatecas,Francisco,98,44
+2021-07,Pan,Panadería,Jerez,Ana,50,48
+2021-05,Pan,Panadería,Fresnillo,Clauido,59,22
+2021-04,Platano,Frutas,Fresnillo,Héctor,177,23
+2021-10,Leche,Lácteos,Guadalupe,Francisco,79,20
+2021-01,Platano,Frutas,Guadalupe,Clauido,131,84
+2021-12,Manzana,Frutas,Guadalupe,Ana,50,97
+2021-05,Pan,Panadería,Tlaltenango,Ana,185,75
+2021-02,Manzana,Frutas,Guadalupe,Ana,75,27
+2021-10,Manzana,Frutas,Fresnillo,Francisco,72,35
+2021-11,Platano,Frutas,Tlaltenango,Nora,70,28
+2021-04,Platano,Frutas,Zacatecas,Ana,73,51
+2021-09,Pan,Panadería,Tlaltenango,Nora,133,86
+2021-09,Jugo de Naranja,Bebidas,Guadalupe,Ana,68,63
+2021-11,Leche,Lácteos,Guadalupe,Francisco,62,35
+2021-02,Jugo de Naranja,Bebidas,Fresnillo,Ana,75,62
+2021-12,Manzana,Frutas,Tlaltenango,Francisco,154,94
+2021-11,Pan,Panadería,Zacatecas,Ana,155,90
+2021-10,Manzana,Frutas,Jerez,Ana,171,83
+2021-08,Pan,Panadería,Guadalupe,Ana,175,63
+2021-05,Platano,Frutas,Jerez,Héctor,153,97
+2021-02,Leche,Lácteos,Zacatecas,Ana,190,30
+2021-09,Pan,Panadería,Zacatecas,Héctor,195,58
+2021-06,Platano,Frutas,Jerez,Clauido,177,53
+2021-07,Platano,Frutas,Tlaltenango,Clauido,58,88
+2021-07,Manzana,Frutas,Guadalupe,Héctor,159,38
+2021-09,Manzana,Frutas,Tlaltenango,Clauido,79,97
+2021-06,Manzana,Frutas,Fresnillo,Ana,142,99
+2021-10,Platano,Frutas,Guadalupe,Clauido,131,66
+2021-12,Manzana,Frutas,Tlaltenango,Ana,156,57
+2021-01,Jugo de Naranja,Bebidas,Zacatecas,Nora,97,57
+2021-09,Platano,Frutas,Zacatecas,Clauido,192,38
+2021-11,Pan,Panadería,Fresnillo,Ana,63,47
+2021-04,Manzana,Frutas,Zacatecas,Nora,74,80
+2021-12,Leche,Lácteos,Jerez,Ana,122,50
+2021-12,Manzana,Frutas,Tlaltenango,Ana,153,80
+2021-06,Leche,Lácteos,Tlaltenango,Ana,200,78
+2021-11,Leche,Lácteos,Tlaltenango,Ana,142,40
+2021-10,Manzana,Frutas,Fresnillo,Ana,81,70
+2021-10,Manzana,Frutas,Guadalupe,Ana,194,81
+2021-01,Jugo de Naranja,Bebidas,Tlaltenango,Clauido,193,48
+2021-08,Leche,Lácteos,Guadalupe,Ana,130,74
+2021-12,Jugo de Naranja,Bebidas,Zacatecas,Nora,112,52
+2021-11,Leche,Lácteos,Tlaltenango,Francisco,92,74
+2021-02,Platano,Frutas,Guadalupe,Francisco,75,43
+2021-12,Platano,Frutas,Tlaltenango,Héctor,164,47
+2021-11,Jugo de Naranja,Bebidas,Fresnillo,Ana,172,84
+2021-02,Manzana,Frutas,Zacatecas,Héctor,151,50
+2021-01,Pan,Panadería,Zacatecas,Francisco,121,89
+2021-10,Jugo de Naranja,Bebidas,Jerez,Nora,178,36
+2021-07,Jugo de Naranja,Bebidas,Jerez,Francisco,113,25
+2021-12,Pan,Panadería,Jerez,Héctor,107,53
+2021-01,Manzana,Frutas,Fresnillo,Héctor,108,37
+2021-12,Manzana,Frutas,Fresnillo,Héctor,166,47
+2021-09,Jugo de Naranja,Bebidas,Jerez,Nora,107,27
+2021-07,Pan,Panadería,Jerez,Nora,144,20
+2021-05,Leche,Lácteos,Fresnillo,Héctor,53,37
+2021-08,Pan,Panadería,Guadalupe,Héctor,175,20
+2021-08,Manzana,Frutas,Zacatecas,Nora,153,58
+2021-07,Leche,Lácteos,Tlaltenango,Nora,95,54
+2021-11,Leche,Lácteos,Zacatecas,Clauido,179,41
+2021-12,Pan,Panadería,Tlaltenango,Francisco,54,30
+2021-12,Pan,Panadería,Guadalupe,Nora,159,70
+2021-09,Leche,Lácteos,Zacatecas,Nora,128,48
+2021-01,Manzana,Frutas,Guadalupe,Nora,169,45
+2021-05,Manzana,Frutas,Zacatecas,Nora,158,29
+2021-05,Pan,Panadería,Zacatecas,Francisco,139,34
+2021-09,Jugo de Naranja,Bebidas,Zacatecas,Ana,117,100
+2021-11,Leche,Lácteos,Fresnillo,Francisco,175,23
+2021-07,Pan,Panadería,Jerez,Francisco,200,56
+2021-04,Leche,Lácteos,Guadalupe,Nora,117,80
+2021-09,Manzana,Frutas,Fresnillo,Francisco,122,98
+2021-02,Manzana,Frutas,Jerez,Ana,189,81
+2021-07,Leche,Lácteos,Tlaltenango,Héctor,63,24
+2021-04,Platano,Frutas,Zacatecas,Ana,163,58
+2021-01,Manzana,Frutas,Tlaltenango,Nora,138,99
+2021-11,Manzana,Frutas,Guadalupe,Ana,187,56
+2021-03,Platano,Frutas,Fresnillo,Francisco,190,81
+2021-04,Manzana,Frutas,Tlaltenango,Francisco,104,74
+2021-07,Platano,Frutas,Tlaltenango,Francisco,199,59
+2021-06,Platano,Frutas,Fresnillo,Ana,87,54
+2021-01,Manzana,Frutas,Guadalupe,Clauido,157,75
+2021-06,Platano,Frutas,Zacatecas,Ana,178,68
+2021-06,Leche,Lácteos,Guadalupe,Nora,64,87
+2021-06,Platano,Frutas,Tlaltenango,Héctor,180,42
+2021-09,Jugo de Naranja,Bebidas,Guadalupe,Clauido,68,51
+2021-07,Jugo de Naranja,Bebidas,Zacatecas,Nora,108,91
+2021-08,Pan,Panadería,Jerez,Héctor,59,99
+2021-02,Jugo de Naranja,Bebidas,Fresnillo,Nora,121,58
+2021-07,Pan,Panadería,Tlaltenango,Nora,181,71
+2021-09,Platano,Frutas,Jerez,Francisco,54,47
+2021-02,Pan,Panadería,Jerez,Clauido,101,75
+2021-11,Jugo de Naranja,Bebidas,Jerez,Héctor,67,31
+2021-11,Manzana,Frutas,Guadalupe,Ana,172,38
+2021-09,Pan,Panadería,Guadalupe,Nora,171,95
+2021-03,Manzana,Frutas,Zacatecas,Ana,169,65
+2021-06,Manzana,Frutas,Tlaltenango,Francisco,159,70
+2021-10,Manzana,Frutas,Tlaltenango,Ana,108,56
+2021-08,Pan,Panadería,Guadalupe,Francisco,136,69
+2021-04,Jugo de Naranja,Bebidas,Guadalupe,Nora,67,53
+2021-10,Pan,Panadería,Guadalupe,Francisco,118,63
+2021-03,Leche,Lácteos,Jerez,Héctor,52,68
+2021-12,Leche,Lácteos,Jerez,Clauido,198,85
+2021-11,Jugo de Naranja,Bebidas,Guadalupe,Clauido,53,48
+2021-09,Jugo de Naranja,Bebidas,Jerez,Nora,195,45
+2021-10,Pan,Panadería,Zacatecas,Nora,94,37
+2021-07,Jugo de Naranja,Bebidas,Guadalupe,Clauido,91,24
+2021-10,Platano,Frutas,Tlaltenango,Ana,112,99
+2021-04,Jugo de Naranja,Bebidas,Guadalupe,Ana,111,55
+2021-02,Pan,Panadería,Jerez,Nora,148,55
+2021-05,Manzana,Frutas,Guadalupe,Ana,187,73
+2021-09,Leche,Lácteos,Jerez,Nora,124,56
+2021-08,Pan,Panadería,Tlaltenango,Clauido,67,57
+2021-03,Leche,Lácteos,Guadalupe,Héctor,112,37
+2021-02,Manzana,Frutas,Zacatecas,Ana,190,76
+2021-01,Platano,Frutas,Guadalupe,Clauido,81,47
+2021-02,Pan,Panadería,Fresnillo,Ana,100,42
+2021-04,Leche,Lácteos,Zacatecas,Clauido,172,44
+2021-12,Jugo de Naranja,Bebidas,Fresnillo,Héctor,107,62
+2021-07,Leche,Lácteos,Jerez,Ana,73,31
+2021-07,Manzana,Frutas,Tlaltenango,Francisco,78,50
+2021-02,Pan,Panadería,Zacatecas,Clauido,53,41
+2021-01,Jugo de Naranja,Bebidas,Jerez,Nora,194,42
+2021-10,Leche,Lácteos,Guadalupe,Francisco,191,66
+2021-06,Manzana,Frutas,Zacatecas,Clauido,62,29
+2021-08,Manzana,Frutas,Fresnillo,Héctor,97,83
+2021-03,Leche,Lácteos,Guadalupe,Ana,130,84
+2021-12,Platano,Frutas,Zacatecas,Héctor,191,98
+2021-05,Jugo de Naranja,Bebidas,Guadalupe,Ana,149,88
+2021-06,Jugo de Naranja,Bebidas,Fresnillo,Nora,73,99
+2021-09,Platano,Frutas,Jerez,Francisco,159,75
+2021-11,Platano,Frutas,Tlaltenango,Francisco,162,98
+2021-01,Leche,Lácteos,Fresnillo,Nora,123,89
+2021-08,Platano,Frutas,Jerez,Héctor,143,41
+2021-04,Manzana,Frutas,Tlaltenango,Nora,101,63
+2021-06,Jugo de Naranja,Bebidas,Zacatecas,Nora,144,33
+2021-02,Platano,Frutas,Fresnillo,Francisco,88,68
+2021-11,Jugo de Naranja,Bebidas,Guadalupe,Nora,87,80
+2021-06,Jugo de Naranja,Bebidas,Tlaltenango,Francisco,100,92
+2021-02,Manzana,Frutas,Tlaltenango,Ana,139,33
+2021-07,Leche,Lácteos,Jerez,Héctor,171,46
+2021-06,Pan,Panadería,Zacatecas,Clauido,172,37
+2021-02,Manzana,Frutas,Guadalupe,Ana,189,39
+2021-12,Platano,Frutas,Zacatecas,Héctor,69,53
+2021-02,Jugo de Naranja,Bebidas,Zacatecas,Ana,186,42
+2021-07,Manzana,Frutas,Jerez,Héctor,197,99
+2021-09,Jugo de Naranja,Bebidas,Guadalupe,Francisco,140,24
+2021-07,Platano,Frutas,Fresnillo,Francisco,200,81
+2021-12,Manzana,Frutas,Zacatecas,Francisco,72,73
+2021-05,Pan,Panadería,Guadalupe,Francisco,154,92
+2021-04,Leche,Lácteos,Zacatecas,Nora,187,43
+2021-10,Jugo de Naranja,Bebidas,Jerez,Nora,160,79
+2021-09,Leche,Lácteos,Tlaltenango,Héctor,178,91
+2021-09,Platano,Frutas,Guadalupe,Francisco,82,59
+2021-06,Jugo de Naranja,Bebidas,Tlaltenango,Héctor,155,42
+2021-10,Platano,Frutas,Tlaltenango,Ana,140,29
+2021-06,Pan,Panadería,Fresnillo,Nora,118,31
+2021-05,Jugo de Naranja,Bebidas,Fresnillo,Héctor,181,96
+2021-05,Jugo de Naranja,Bebidas,Fresnillo,Francisco,156,57
+2021-09,Manzana,Frutas,Fresnillo,Héctor,113,35
+2021-06,Leche,Lácteos,Jerez,Clauido,80,34
+2021-09,Pan,Panadería,Jerez,Ana,162,66
+2021-03,Manzana,Frutas,Zacatecas,Ana,190,41
+2021-07,Jugo de Naranja,Bebidas,Fresnillo,Nora,87,24
+2021-10,Manzana,Frutas,Guadalupe,Nora,105,99
+2021-12,Leche,Lácteos,Zacatecas,Héctor,142,96
+2021-09,Leche,Lácteos,Jerez,Francisco,56,74
+2021-11,Pan,Panadería,Jerez,Clauido,196,52
+2021-01,Pan,Panadería,Zacatecas,Ana,195,74
+2021-12,Leche,Lácteos,Fresnillo,Nora,138,58
+2021-11,Leche,Lácteos,Guadalupe,Héctor,170,74
+2021-12,Leche,Lácteos,Fresnillo,Ana,177,59
+2021-05,Platano,Frutas,Fresnillo,Nora,133,64
+2021-02,Jugo de Naranja,Bebidas,Jerez,Francisco,125,78
+2021-05,Pan,Panadería,Zacatecas,Clauido,147,78
+2021-10,Leche,Lácteos,Jerez,Francisco,190,82
+2021-02,Pan,Panadería,Fresnillo,Francisco,130,75
+2021-07,Manzana,Frutas,Tlaltenango,Ana,150,87
+2021-11,Leche,Lácteos,Guadalupe,Clauido,150,77
+2021-01,Jugo de Naranja,Bebidas,Fresnillo,Francisco,74,22
+2021-02,Leche,Lácteos,Guadalupe,Francisco,73,64
+2021-04,Leche,Lácteos,Tlaltenango,Clauido,169,88
+2021-07,Pan,Panadería,Tlaltenango,Héctor,151,89
+2021-10,Jugo de Naranja,Bebidas,Fresnillo,Clauido,86,50
+2021-05,Platano,Frutas,Fresnillo,Nora,82,51
+2021-11,Leche,Lácteos,Guadalupe,Clauido,91,95
+2021-09,Jugo de Naranja,Bebidas,Zacatecas,Francisco,124,42
+2021-10,Platano,Frutas,Tlaltenango,Clauido,116,75
+2021-09,Pan,Panadería,Tlaltenango,Clauido,161,39
+2021-06,Leche,Lácteos,Zacatecas,Nora,129,69
+2021-05,Platano,Frutas,Fresnillo,Héctor,144,30
+2021-11,Platano,Frutas,Jerez,Nora,97,28
+2021-05,Manzana,Frutas,Tlaltenango,Francisco,142,64
+2021-12,Platano,Frutas,Guadalupe,Nora,171,59
+2021-07,Leche,Lácteos,Zacatecas,Ana,140,52
+2021-11,Manzana,Frutas,Guadalupe,Nora,69,61
+2021-04,Manzana,Frutas,Fresnillo,Ana,142,59
+2021-10,Leche,Lácteos,Jerez,Clauido,79,54
+2021-10,Leche,Lácteos,Fresnillo,Clauido,163,40
+2021-04,Platano,Frutas,Jerez,Francisco,174,29
+2021-02,Jugo de Naranja,Bebidas,Guadalupe,Nora,132,92
+2021-07,Jugo de Naranja,Bebidas,Guadalupe,Ana,68,66
+2021-02,Platano,Frutas,Guadalupe,Clauido,116,86
+2021-08,Platano,Frutas,Tlaltenango,Nora,105,90
+2021-02,Platano,Frutas,Zacatecas,Nora,145,30
+2021-12,Jugo de Naranja,Bebidas,Tlaltenango,Francisco,74,63
+2021-02,Leche,Lácteos,Zacatecas,Clauido,122,24
+2021-05,Leche,Lácteos,Fresnillo,Héctor,174,93
+2021-01,Leche,Lácteos,Tlaltenango,Nora,127,40
+2021-10,Pan,Panadería,Tlaltenango,Francisco,159,68
+2021-12,Platano,Frutas,Fresnillo,Clauido,185,51
+2021-06,Manzana,Frutas,Fresnillo,Francisco,187,90
+2021-11,Platano,Frutas,Guadalupe,Ana,129,51
+2021-11,Jugo de Naranja,Bebidas,Fresnillo,Francisco,128,34
+2021-07,Pan,Panadería,Fresnillo,Clauido,120,81
+2021-11,Jugo de Naranja,Bebidas,Jerez,Ana,124,41
+2021-09,Manzana,Frutas,Jerez,Nora,162,88
+2021-09,Manzana,Frutas,Tlaltenango,Héctor,156,73
+2021-03,Platano,Frutas,Guadalupe,Francisco,145,97
+2021-08,Leche,Lácteos,Zacatecas,Clauido,57,47
+2021-03,Pan,Panadería,Tlaltenango,Nora,99,22
+2021-10,Platano,Frutas,Tlaltenango,Clauido,177,97
+2021-12,Manzana,Frutas,Fresnillo,Ana,110,52
+2021-06,Pan,Panadería,Zacatecas,Clauido,89,85
+2021-04,Leche,Lácteos,Jerez,Ana,94,41
+2021-07,Manzana,Frutas,Guadalupe,Francisco,178,50
+2021-08,Jugo de Naranja,Bebidas,Tlaltenango,Nora,193,74
+2021-04,Platano,Frutas,Zacatecas,Nora,103,76
+2021-06,Pan,Panadería,Zacatecas,Héctor,131,50
+2021-03,Pan,Panadería,Zacatecas,Clauido,74,41
+2021-03,Leche,Lácteos,Tlaltenango,Héctor,179,63
+2021-10,Pan,Panadería,Fresnillo,Héctor,190,87
+2021-07,Jugo de Naranja,Bebidas,Zacatecas,Francisco,118,44
+2021-02,Manzana,Frutas,Fresnillo,Ana,150,81
+2021-11,Platano,Frutas,Guadalupe,Ana,88,25
+2021-12,Platano,Frutas,Guadalupe,Héctor,82,80
+2021-11,Manzana,Frutas,Tlaltenango,Nora,143,87
+2021-10,Leche,Lácteos,Zacatecas,Nora,116,55
+2021-10,Pan,Panadería,Tlaltenango,Ana,127,86
+2021-12,Platano,Frutas,Guadalupe,Francisco,145,75
+2021-01,Platano,Frutas,Guadalupe,Héctor,166,92
+2021-07,Pan,Panadería,Jerez,Héctor,139,55
+2021-12,Manzana,Frutas,Fresnillo,Héctor,129,85
+2021-04,Manzana,Frutas,Fresnillo,Héctor,149,87
+2021-10,Manzana,Frutas,Zacatecas,Héctor,82,63
+2021-04,Pan,Panadería,Tlaltenango,Francisco,58,29
+2021-05,Pan,Panadería,Fresnillo,Nora,155,52
+2021-05,Jugo de Naranja,Bebidas,Tlaltenango,Clauido,148,42
+2021-09,Pan,Panadería,Fresnillo,Héctor,121,91
+2021-10,Pan,Panadería,Fresnillo,Héctor,97,51
+2021-12,Jugo de Naranja,Bebidas,Zacatecas,Héctor,168,29
+2021-01,Leche,Lácteos,Jerez,Ana,135,50
+2021-05,Leche,Lácteos,Fresnillo,Francisco,153,96
+2021-09,Manzana,Frutas,Tlaltenango,Héctor,125,76
+2021-02,Leche,Lácteos,Guadalupe,Clauido,65,95
+2021-08,Manzana,Frutas,Guadalupe,Ana,52,89
+2021-10,Jugo de Naranja,Bebidas,Fresnillo,Ana,151,47
+2021-10,Pan,Panadería,Guadalupe,Héctor,120,97
+2021-06,Leche,Lácteos,Fresnillo,Nora,107,48
+2021-05,Leche,Lácteos,Fresnillo,Ana,98,52
+2021-06,Pan,Panadería,Fresnillo,Ana,123,53
+2021-04,Pan,Panadería,Fresnillo,Nora,192,60
+2021-11,Pan,Panadería,Zacatecas,Clauido,97,72
+2021-11,Platano,Frutas,Zacatecas,Clauido,131,36
+2021-11,Pan,Panadería,Jerez,Ana,52,76
+2021-02,Manzana,Frutas,Guadalupe,Clauido,153,26
+2021-02,Platano,Frutas,Zacatecas,Nora,80,60
+2021-12,Manzana,Frutas,Fresnillo,Francisco,125,73
+2021-05,Leche,Lácteos,Tlaltenango,Clauido,88,47
+2021-09,Leche,Lácteos,Zacatecas,Francisco,162,38
+2021-05,Manzana,Frutas,Jerez,Francisco,156,79
+2021-01,Jugo de Naranja,Bebidas,Fresnillo,Nora,71,46
+2021-03,Manzana,Frutas,Guadalupe,Héctor,85,29
+2021-05,Jugo de Naranja,Bebidas,Fresnillo,Clauido,139,79
+2021-01,Jugo de Naranja,Bebidas,Jerez,Francisco,82,62
+2021-07,Platano,Frutas,Tlaltenango,Francisco,151,82
+2021-07,Manzana,Frutas,Guadalupe,Nora,192,50
+2021-07,Manzana,Frutas,Jerez,Francisco,153,66
+2021-10,Leche,Lácteos,Tlaltenango,Francisco,170,62
+2021-02,Pan,Panadería,Fresnillo,Ana,103,44
+2021-01,Pan,Panadería,Fresnillo,Nora,110,93
+2021-08,Leche,Lácteos,Fresnillo,Ana,117,25
+2021-10,Jugo de Naranja,Bebidas,Tlaltenango,Nora,158,77
+2021-09,Leche,Lácteos,Fresnillo,Francisco,171,38
+2021-04,Platano,Frutas,Guadalupe,Clauido,95,47
+2021-06,Manzana,Frutas,Tlaltenango,Nora,144,30
+2021-04,Jugo de Naranja,Bebidas,Guadalupe,Ana,131,24
+2021-03,Pan,Panadería,Guadalupe,Ana,60,73
+2021-07,Platano,Frutas,Zacatecas,Nora,177,73
+2021-10,Platano,Frutas,Guadalupe,Clauido,72,71
+2021-08,Pan,Panadería,Tlaltenango,Clauido,200,100
+2021-07,Pan,Panadería,Jerez,Clauido,97,56
+2021-03,Manzana,Frutas,Guadalupe,Clauido,174,54
+2021-06,Manzana,Frutas,Tlaltenango,Nora,199,96
+2021-04,Jugo de Naranja,Bebidas,Guadalupe,Nora,177,77
+2021-09,Pan,Panadería,Guadalupe,Ana,169,36
+2021-10,Leche,Lácteos,Tlaltenango,Héctor,199,73
+2021-12,Manzana,Frutas,Guadalupe,Francisco,123,23
+2021-02,Pan,Panadería,Tlaltenango,Francisco,100,49
+2021-05,Jugo de Naranja,Bebidas,Fresnillo,Nora,80,57
+2021-09,Manzana,Frutas,Jerez,Héctor,111,70
+2021-05,Leche,Lácteos,Zacatecas,Nora,176,25
+2021-11,Jugo de Naranja,Bebidas,Zacatecas,Francisco,167,99
+2021-12,Pan,Panadería,Tlaltenango,Ana,82,71
+2021-10,Jugo de Naranja,Bebidas,Tlaltenango,Ana,114,75
+2021-08,Pan,Panadería,Jerez,Francisco,157,60
+2021-02,Leche,Lácteos,Jerez,Francisco,145,67
+2021-12,Platano,Frutas,Jerez,Clauido,84,21
+2021-05,Manzana,Frutas,Guadalupe,Clauido,154,40
+2021-07,Manzana,Frutas,Jerez,Francisco,105,45
+2021-09,Pan,Panadería,Tlaltenango,Héctor,181,27
+2021-08,Pan,Panadería,Fresnillo,Nora,164,57
+2021-02,Jugo de Naranja,Bebidas,Jerez,Francisco,84,25
+2021-10,Pan,Panadería,Jerez,Héctor,163,93
+2021-09,Platano,Frutas,Fresnillo,Ana,125,65
+2021-10,Manzana,Frutas,Tlaltenango,Héctor,120,39
+2021-04,Leche,Lácteos,Tlaltenango,Héctor,59,51
+2021-04,Leche,Lácteos,Guadalupe,Ana,80,35
+2021-07,Pan,Panadería,Fresnillo,Ana,168,94
+2021-12,Jugo de Naranja,Bebidas,Fresnillo,Nora,132,40
+2021-05,Leche,Lácteos,Tlaltenango,Clauido,50,76
+2021-06,Manzana,Frutas,Tlaltenango,Francisco,192,74
+2021-09,Manzana,Frutas,Tlaltenango,Nora,106,73
+2021-05,Leche,Lácteos,Tlaltenango,Francisco,58,48
+2021-12,Pan,Panadería,Guadalupe,Francisco,129,58
+2021-08,Leche,Lácteos,Tlaltenango,Nora,56,90
+2021-07,Manzana,Frutas,Fresnillo,Clauido,130,35
+2021-10,Platano,Frutas,Tlaltenango,Nora,197,71
+2021-03,Platano,Frutas,Zacatecas,Nora,182,80
+2021-06,Jugo de Naranja,Bebidas,Fresnillo,Nora,134,69
+2021-09,Pan,Panadería,Guadalupe,Ana,53,59
+2021-06,Leche,Lácteos,Fresnillo,Ana,106,65
+2021-09,Jugo de Naranja,Bebidas,Tlaltenango,Héctor,96,37
+2021-01,Pan,Panadería,Guadalupe,Nora,60,53
+2021-10,Manzana,Frutas,Tlaltenango,Francisco,99,78
+2021-12,Manzana,Frutas,Fresnillo,Héctor,66,56
+2021-01,Jugo de Naranja,Bebidas,Zacatecas,Héctor,176,40
+2021-05,Leche,Lácteos,Tlaltenango,Ana,162,43
+2021-03,Manzana,Frutas,Jerez,Francisco,155,89
+2021-03,Leche,Lácteos,Zacatecas,Ana,63,76
+2021-03,Manzana,Frutas,Jerez,Nora,158,35
+2021-01,Platano,Frutas,Tlaltenango,Clauido,195,61
+2021-12,Leche,Lácteos,Fresnillo,Ana,196,90
+2021-02,Pan,Panadería,Jerez,Nora,156,48
+2021-12,Manzana,Frutas,Jerez,Clauido,142,21
+2021-06,Manzana,Frutas,Jerez,Francisco,132,28
+2021-02,Manzana,Frutas,Tlaltenango,Clauido,119,67
+2021-10,Jugo de Naranja,Bebidas,Tlaltenango,Clauido,175,29
+2021-10,Pan,Panadería,Guadalupe,Ana,199,71
+2021-08,Jugo de Naranja,Bebidas,Jerez,Clauido,80,90
+2021-12,Platano,Frutas,Zacatecas,Ana,66,42
+2021-09,Manzana,Frutas,Jerez,Clauido,161,88
+2021-01,Pan,Panadería,Guadalupe,Nora,59,49
+2021-04,Platano,Frutas,Guadalupe,Héctor,86,38
+2021-12,Pan,Panadería,Tlaltenango,Ana,102,97
+2021-12,Leche,Lácteos,Zacatecas,Clauido,131,31
+2021-07,Platano,Frutas,Guadalupe,Francisco,74,92
+2021-08,Jugo de Naranja,Bebidas,Fresnillo,Ana,163,20
+2021-01,Jugo de Naranja,Bebidas,Zacatecas,Ana,58,87
+2021-09,Jugo de Naranja,Bebidas,Zacatecas,Ana,74,72
+2021-12,Jugo de Naranja,Bebidas,Guadalupe,Francisco,69,46
+2021-11,Pan,Panadería,Guadalupe,Ana,189,40
+2021-05,Platano,Frutas,Guadalupe,Héctor,199,60
+2021-09,Leche,Lácteos,Tlaltenango,Francisco,194,74
+2021-04,Jugo de Naranja,Bebidas,Jerez,Clauido,87,27
+2021-05,Manzana,Frutas,Jerez,Nora,183,48
+2021-11,Pan,Panadería,Zacatecas,Francisco,64,37
+2021-05,Manzana,Frutas,Jerez,Ana,155,44
+2021-11,Manzana,Frutas,Jerez,Nora,74,69
+2021-10,Jugo de Naranja,Bebidas,Zacatecas,Héctor,187,51
+2021-02,Manzana,Frutas,Tlaltenango,Nora,188,98
+2021-12,Platano,Frutas,Guadalupe,Nora,142,21
+2021-02,Jugo de Naranja,Bebidas,Guadalupe,Héctor,74,88
+2021-11,Jugo de Naranja,Bebidas,Fresnillo,Ana,97,42
+2021-12,Manzana,Frutas,Tlaltenango,Ana,79,96
+2021-09,Platano,Frutas,Jerez,Francisco,154,60
+2021-05,Jugo de Naranja,Bebidas,Zacatecas,Ana,191,24
+2021-03,Platano,Frutas,Zacatecas,Nora,188,76
+2021-07,Manzana,Frutas,Fresnillo,Clauido,57,86
+2021-06,Manzana,Frutas,Tlaltenango,Nora,150,64
+2021-03,Platano,Frutas,Fresnillo,Clauido,67,39
+2021-11,Manzana,Frutas,Guadalupe,Héctor,191,24
+2021-12,Jugo de Naranja,Bebidas,Guadalupe,Héctor,182,47
+2021-02,Leche,Lácteos,Guadalupe,Francisco,157,69
+2021-10,Leche,Lácteos,Jerez,Ana,170,23
+2021-12,Leche,Lácteos,Tlaltenango,Héctor,161,58
+2021-07,Manzana,Frutas,Guadalupe,Clauido,165,98
+2021-11,Platano,Frutas,Guadalupe,Francisco,102,78
+2021-04,Platano,Frutas,Fresnillo,Héctor,61,67
+2021-12,Pan,Panadería,Zacatecas,Ana,84,88
+2021-08,Pan,Panadería,Zacatecas,Héctor,186,65
+2021-06,Pan,Panadería,Jerez,Clauido,62,70
+2021-06,Jugo de Naranja,Bebidas,Guadalupe,Héctor,63,40
+2021-04,Pan,Panadería,Jerez,Francisco,60,100
+2021-10,Pan,Panadería,Fresnillo,Francisco,151,88
+2021-09,Manzana,Frutas,Tlaltenango,Héctor,87,52
+2021-11,Platano,Frutas,Jerez,Francisco,59,76
+2021-11,Manzana,Frutas,Fresnillo,Francisco,74,89
+2021-12,Leche,Lácteos,Tlaltenango,Francisco,102,52
+2021-09,Jugo de Naranja,Bebidas,Fresnillo,Francisco,101,37
+2021-04,Leche,Lácteos,Jerez,Clauido,67,56
+2021-04,Platano,Frutas,Fresnillo,Héctor,76,26
+2021-02,Pan,Panadería,Fresnillo,Clauido,63,68
+2021-06,Pan,Panadería,Tlaltenango,Nora,165,21
+2021-08,Manzana,Frutas,Fresnillo,Nora,66,57
+2021-11,Jugo de Naranja,Bebidas,Fresnillo,Nora,187,48
+2021-02,Pan,Panadería,Jerez,Francisco,138,20
+2021-07,Jugo de Naranja,Bebidas,Fresnillo,Francisco,110,74
+2021-03,Pan,Panadería,Tlaltenango,Clauido,170,56
+2021-12,Platano,Frutas,Fresnillo,Nora,108,41
+2021-08,Pan,Panadería,Jerez,Nora,174,77
+2021-08,Platano,Frutas,Fresnillo,Francisco,152,50
+2021-03,Manzana,Frutas,Guadalupe,Clauido,136,29
+2021-04,Leche,Lácteos,Fresnillo,Nora,121,47
+2021-10,Leche,Lácteos,Jerez,Francisco,181,32
+2021-05,Manzana,Frutas,Fresnillo,Ana,127,36
+2021-10,Leche,Lácteos,Guadalupe,Ana,98,87
+2021-05,Jugo de Naranja,Bebidas,Fresnillo,Héctor,188,22
+2021-05,Platano,Frutas,Fresnillo,Clauido,93,43
+2021-06,Jugo de Naranja,Bebidas,Fresnillo,Francisco,187,23
+2021-05,Jugo de Naranja,Bebidas,Guadalupe,Francisco,135,45
+2021-09,Platano,Frutas,Fresnillo,Francisco,116,69
+2021-06,Leche,Lácteos,Guadalupe,Francisco,137,93
+2021-05,Pan,Panadería,Guadalupe,Clauido,80,58
+2021-01,Platano,Frutas,Fresnillo,Francisco,71,74
+2021-09,Platano,Frutas,Tlaltenango,Clauido,194,81
+2021-03,Platano,Frutas,Tlaltenango,Clauido,66,59
+2021-02,Jugo de Naranja,Bebidas,Fresnillo,Clauido,189,92
+2021-01,Platano,Frutas,Jerez,Francisco,186,92
+2021-11,Jugo de Naranja,Bebidas,Tlaltenango,Nora,106,46
+2021-03,Jugo de Naranja,Bebidas,Guadalupe,Clauido,189,34
+2021-03,Jugo de Naranja,Bebidas,Guadalupe,Héctor,137,61
+2021-11,Manzana,Frutas,Guadalupe,Francisco,60,90
+2021-12,Pan,Panadería,Fresnillo,Ana,114,21
+2021-11,Jugo de Naranja,Bebidas,Zacatecas,Clauido,146,30
+2021-06,Leche,Lácteos,Zacatecas,Francisco,74,29
+2021-12,Platano,Frutas,Tlaltenango,Nora,97,30
+2021-02,Platano,Frutas,Zacatecas,Francisco,181,53
+2021-11,Leche,Lácteos,Fresnillo,Nora,82,77
+2021-08,Platano,Frutas,Guadalupe,Clauido,70,24
+2021-10,Jugo de Naranja,Bebidas,Zacatecas,Ana,136,95
+2021-05,Manzana,Frutas,Jerez,Ana,153,25
+2021-11,Platano,Frutas,Guadalupe,Nora,112,76
+2021-02,Pan,Panadería,Fresnillo,Francisco,123,89
+2021-11,Jugo de Naranja,Bebidas,Fresnillo,Héctor,165,65
+2021-07,Platano,Frutas,Zacatecas,Héctor,183,44
+2021-07,Platano,Frutas,Guadalupe,Francisco,119,61
+2021-11,Pan,Panadería,Jerez,Héctor,200,78
+2021-12,Manzana,Frutas,Tlaltenango,Francisco,154,39
+2021-11,Platano,Frutas,Jerez,Héctor,164,44
+2021-04,Platano,Frutas,Fresnillo,Francisco,111,66
+2021-02,Pan,Panadería,Fresnillo,Héctor,81,45
