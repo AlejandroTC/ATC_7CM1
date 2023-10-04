@@ -50,10 +50,10 @@ public class Graficador {
         this.grafica = ChartFactory.createXYAreaChart(titulo, ejeX, ejeY, series);
     }
     
-     public void muestraGrafica(){
+     public void muestraGrafica(int x, int y){
         ChartFrame frame = new ChartFrame("Histograma de color", grafica);
         frame.setVisible(true);
         frame.setSize(500,370);
-        
+        frame.setLocation(x, y);
     }
 }
