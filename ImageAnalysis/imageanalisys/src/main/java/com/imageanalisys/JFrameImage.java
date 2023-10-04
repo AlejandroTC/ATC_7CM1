@@ -18,11 +18,13 @@ public class JFrameImage extends javax.swing.JFrame {
         int h = imagen.getHeight(null);
         Image imagenEscalada = HerramientasImagen.toBufferedImage(imagen).getScaledInstance(w/4, h/4, BufferedImage.TYPE_INT_RGB);
         this.jLabelImagen.setIcon(new ImageIcon(imagenEscalada));
-        
+    }
+
+    public Image RandomColor(Image imagenEscalada){
         Random random = new Random();
         int x = random.nextInt(imagenEscalada.getWidth(null));
         int y = random.nextInt(imagenEscalada.getHeight(null));
-        int rgb = HerramientasImagen.toBufferedImage(imagen).getRGB(x,y);
+        int rgb = HerramientasImagen.toBufferedImage(imagenEscalada).getRGB(x,y);
 
         // Extrae los componentes RGB (rojo, verde, azul)
         int red = (rgb >> 16) & 0xFF;
@@ -54,9 +56,7 @@ public class JFrameImage extends javax.swing.JFrame {
         }
         System.out.println(contador);
         Image cambiada = HerramientasImagen.toImage(imgrec);
-        HerramientasImagen.calcularHistograma(imagenEscalada);
-        this.jLabelImagen.setIcon(new ImageIcon(imagenEscalada));
-
+        return cambiada;
     }
 
     private void initComponents() {

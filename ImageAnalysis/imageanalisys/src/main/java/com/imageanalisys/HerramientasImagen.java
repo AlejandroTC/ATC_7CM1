@@ -22,6 +22,9 @@ public class HerramientasImagen {
                     new FileNameExtensionFilter("Imagenes","jpg","jpeg","png","bmp");
             // crear un selector de archivos
             JFileChooser selector = new JFileChooser();
+            // Especifica la carpeta inicial
+            File Folder = new File("/Users/atc/Documentos/Repos/ATC_7CM1/ImageAnalysis");
+            selector.setCurrentDirectory(Folder);
             // agregar el filtro al selector
             selector.addChoosableFileFilter(filtro);
             // especificar que solo se puedan abrir archivos
@@ -73,7 +76,7 @@ public class HerramientasImagen {
         return bi.getScaledInstance(bi.getWidth(),bi.getHeight(), BufferedImage.TYPE_INT_RGB);
     }
 
-    public static void calcularHistograma(Image imagen){
+    public static void calcularHistograma(Image imagen, String titulo){
         //Contadores
         double[] contR = new double[256];
         double[] contG = new double[256];
@@ -88,7 +91,7 @@ public class HerramientasImagen {
                 contB[thisColor.getBlue()] = contB[thisColor.getBlue()]+1;
             }
         }
-        Graficador graficador = new Graficador("Valor", "Frecuencia", "Histograma de Colores");
+        Graficador graficador = new Graficador("Valor", "Frecuencia", titulo);
         // Agrega los datos al objeto Graficador
         graficador.agregarSerie("Rojo", contR);
         graficador.agregarSerie("Azul", contB);

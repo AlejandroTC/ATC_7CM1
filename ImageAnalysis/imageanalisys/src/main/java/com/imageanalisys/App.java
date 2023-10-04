@@ -3,6 +3,8 @@ package com.imageanalisys;
 import java.awt.Image;
 import javax.swing.JPanel;
 
+import com.imageanalisys.MEspacial.Basicas;
+
 public class App 
 {
     public static void main(String[] args) {
@@ -10,8 +12,23 @@ public class App
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 Image imagen = HerramientasImagen.abrirImagen();
-                JFrameImage frame = new JFrameImage(imagen);
-                frame.setVisible(true);
+                // //Imagen Original
+                // JFrameImage original = new JFrameImage(imagen);
+                // original.setVisible(true);
+                // //Histograma
+                // HerramientasImagen.calcularHistograma(imagen, "Original");
+                // //Escala Grises
+                // JFrameImage frame = new JFrameImage(Basicas.escalaDeGrises(imagen));
+                // frame.setVisible(true);
+                // //Histograma Gristes
+                // HerramientasImagen.calcularHistograma(Basicas.escalaDeGrises(imagen), "Grises");
+                JFrameImage Colorear = new JFrameImage(imagen);
+                Colorear.setVisible(true);
+                HerramientasImagen.calcularHistograma(imagen, "Original");
+                JFrameImage Coloreareada = new JFrameImage(Basicas.algo(imagen, 20));
+                Coloreareada.setVisible(true);
+                HerramientasImagen.calcularHistograma(Basicas.algo(imagen, 20), "Coloreada");
+                
             }
         });
     }
