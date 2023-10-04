@@ -28,16 +28,17 @@ public class Basicas {
         return ImageBN;
     }
 
-     public static Image algo(Image original, int m)
+     public static Image aumentarIluminacion(Image original, int m)
     {
         //To buffer para leer la informacion
         BufferedImage originalBuffered = HerramientasImagen.toBufferedImage(original);
         //Recorrer imagen buffereada
         for(int i=0; i < originalBuffered.getWidth(); i++){
             for (int j=0; j < originalBuffered.getHeight(); j++){
-                //Promedio de colores RGB:
+                //Obtener color:
                 int valorpix = originalBuffered.getRGB(i, j);
                 Color whatColors = new Color(valorpix);
+                //Crear nuevo color
                 whatColors = new Color(validar(whatColors.getRed()+m), validar(whatColors.getGreen()+m), validar(whatColors.getBlue()+m));
                 originalBuffered.setRGB(i, j, whatColors.getRGB());
             }
@@ -45,6 +46,44 @@ public class Basicas {
         Image ImageColored = HerramientasImagen.toImage(originalBuffered);
         return ImageColored;
     }
+
+    public static Image calido(Image original, int h)
+    {
+        //To buffer para leer la informacion
+        BufferedImage originalBuffered = HerramientasImagen.toBufferedImage(original);
+        //Recorrer imagen buffereada
+        for(int i=0; i < originalBuffered.getWidth(); i++){
+            for (int j=0; j < originalBuffered.getHeight(); j++){
+                //Obtener color:
+                int valorpix = originalBuffered.getRGB(i, j);
+                Color whatColors = new Color(valorpix);
+                whatColors = new Color(validar(whatColors.getRed()+h), validar(whatColors.getGreen()), validar(whatColors.getBlue()-h));
+                originalBuffered.setRGB(i, j, whatColors.getRGB());
+            }
+        }
+        Image ImageColored = HerramientasImagen.toImage(originalBuffered);
+        return ImageColored;
+    }
+
+    public static Image frio(Image original, int m)
+    {
+        //To buffer para leer la informacion
+        BufferedImage originalBuffered = HerramientasImagen.toBufferedImage(original);
+        //Recorrer imagen buffereada
+        for(int i=0; i < originalBuffered.getWidth(); i++){
+            for (int j=0; j < originalBuffered.getHeight(); j++){
+                //Obtener color:
+                int valorpix = originalBuffered.getRGB(i, j);
+                Color whatColors = new Color(valorpix);
+                whatColors = new Color(validar(whatColors.getRed()-m), validar(whatColors.getGreen()), validar(whatColors.getBlue()+m));
+                originalBuffered.setRGB(i, j, whatColors.getRGB());
+            }
+        }
+        Image ImageColored = HerramientasImagen.toImage(originalBuffered);
+        return ImageColored;
+    }
+
+
     private static int validar (int i){
         if(i>255) return 255;
         if(i<0) return 0;

@@ -25,9 +25,9 @@ public class App
                 JFrameImage Colorear = new JFrameImage(imagen);
                 Colorear.setVisible(true);
                 HerramientasImagen.calcularHistograma(imagen, "Original");
-                JFrameImage Coloreareada = new JFrameImage(Basicas.algo(imagen, 20));
+                JFrameImage Coloreareada = new JFrameImage(Basicas.aumentarIluminacion(imagen, 20));
                 Coloreareada.setVisible(true);
-                HerramientasImagen.calcularHistograma(Basicas.algo(imagen, 20), "Coloreada");
+                HerramientasImagen.calcularHistograma(Basicas.aumentarIluminacion(imagen, 20), "Coloreada");
                 
             }
         });
