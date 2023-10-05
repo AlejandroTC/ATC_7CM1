@@ -7,16 +7,13 @@ from sklearn.metrics import accuracy_score, classification_report
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
-df = pd.read_csv('sloth_data.csv')
+df = pd.read_csv('DataMining/sloth_data.csv')
 
 # Preaprocesamineto
 # Llenar valores faltantes y eliminar registros con edades errorneas
 df = df[df['tail_length_cm'] > 0]
 print(df.head(2))
 # Transformacion 
-from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
-
 # Variables categóricas y numéricas
 cat_features = ['endangered', 'specie', 'sub_specie']
 num_features = ['claw_length_cm', 'size_cm', 'tail_length_cm', 'weight_kg']
@@ -46,48 +43,48 @@ sleep = np.where(condition1, 22,
 
 df['sleep'] = sleep
 print(df.head)
-#Mineria de datos
-plt.scatter(df['size_cm'], df['weight_kg'], color='black')
-plt.xlabel('size_cm')
-plt.ylabel('weight_kg')
-plt.title('Relacion tamaño y peso')
-# plt.show()
+# #Mineria de datos
+# plt.scatter(df['size_cm'], df['weight_kg'], color='black')
+# plt.xlabel('size_cm')
+# plt.ylabel('weight_kg')
+# plt.title('Relacion tamaño y peso')
+# # plt.show()
 
-# Examinar la relación entre las dimensiones y la clasificación de peligro.
+# # Examinar la relación entre las dimensiones y la clasificación de peligro.
 # Relación entre el tamaño (size_cm) con la clasificación de peligro
-critically_endangered = []
-vulnerable = []
-least_concern = []
-for i in range(df.shape[0]):
-    if df["endangered"].iloc[i] == "critically_endangered":
-        critically_endangered.append(df["size_cm"].iloc[i])
-    elif df["endangered"].iloc[i] == "vulnerable":
-        vulnerable.append(df["size_cm"].iloc[i])
-    elif df["endangered"].iloc[i] == "least_concern":
-        least_concern.append(df["size_cm"].iloc[i])
+# critically_endangered = []
+# vulnerable = []
+# least_concern = []
+# for i in range(df.shape[0]):
+#     if df["endangered"].iloc[i] == "critically_endangered":
+#         critically_endangered.append(df["size_cm"].iloc[i])
+#     elif df["endangered"].iloc[i] == "vulnerable":
+#         vulnerable.append(df["size_cm"].iloc[i])
+#     elif df["endangered"].iloc[i] == "least_concern":
+#         least_concern.append(df["size_cm"].iloc[i])
 
-mean_critically = np.mean(critically_endangered)
-print(
-    "Promedio de tamaño(cm) de los perezosos que su clasificación de peligro es critica: ",
-    mean_critically,
-)
-mean_vulnerable = np.mean(vulnerable)
-print(
-    "Promedio de tamaño(cm) de los perezosos que su clasificación de peligro es vulnerable: ",
-    mean_vulnerable,
-)
-mean_least_concern = np.mean(least_concern)
-print(
-    "Promedio de tamaño(cm) de los perezosos que su clasificación de peligro es de menor preocupación: ",
-    mean_least_concern,
-)
+# mean_critically = np.mean(critically_endangered)
+# print(
+#     "Promedio de tamaño(cm) de los perezosos que su clasificación de peligro es critica: ",
+#     mean_critically,
+# )
+# mean_vulnerable = np.mean(vulnerable)
+# print(
+#     "Promedio de tamaño(cm) de los perezosos que su clasificación de peligro es vulnerable: ",
+#     mean_vulnerable,
+# )
+# mean_least_concern = np.mean(least_concern)
+# print(
+#     "Promedio de tamaño(cm) de los perezosos que su clasificación de peligro es de menor preocupación: ",
+#     mean_least_concern,
+# )
 
 
 print(df.head())
 # Dividir los datos en entrenamiento y prueba
-X = df.drop('specie', axis=1)  
-Y = df['specie']
-X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
+x = df.drop(df.columns[4], axis=1) 
+y = df.columns[4]
+X_train, X_test, Y_train, Y_test = train_test_split(x, y, test_size=0.2, random_state=42)
 
 # Crear el pipeline y entrenar el modelo de regresión logística
 pipeline = Pipeline([
