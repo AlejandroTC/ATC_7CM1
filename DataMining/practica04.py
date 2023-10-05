@@ -52,6 +52,37 @@ plt.xlabel('size_cm')
 plt.ylabel('weight_kg')
 plt.title('Relacion tamaño y peso')
 # plt.show()
+
+# Examinar la relación entre las dimensiones y la clasificación de peligro.
+# Relación entre el tamaño (size_cm) con la clasificación de peligro
+critically_endangered = []
+vulnerable = []
+least_concern = []
+for i in range(df.shape[0]):
+    if df["endangered"].iloc[i] == "critically_endangered":
+        critically_endangered.append(df["size_cm"].iloc[i])
+    elif df["endangered"].iloc[i] == "vulnerable":
+        vulnerable.append(df["size_cm"].iloc[i])
+    elif df["endangered"].iloc[i] == "least_concern":
+        least_concern.append(df["size_cm"].iloc[i])
+
+mean_critically = np.mean(critically_endangered)
+print(
+    "Promedio de tamaño(cm) de los perezosos que su clasificación de peligro es critica: ",
+    mean_critically,
+)
+mean_vulnerable = np.mean(vulnerable)
+print(
+    "Promedio de tamaño(cm) de los perezosos que su clasificación de peligro es vulnerable: ",
+    mean_vulnerable,
+)
+mean_least_concern = np.mean(least_concern)
+print(
+    "Promedio de tamaño(cm) de los perezosos que su clasificación de peligro es de menor preocupación: ",
+    mean_least_concern,
+)
+
+
 print(df.head())
 # Dividir los datos en entrenamiento y prueba
 X = df.drop('specie', axis=1)  
