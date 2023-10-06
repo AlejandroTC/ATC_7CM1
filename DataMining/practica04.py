@@ -1,12 +1,12 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score, classification_report
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import ColumnTransformer
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, confusion_matrix
 from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.tree import DecisionTreeClassifier
 df = pd.read_csv('DataMining/sloth_data.csv')
 
 # Preaprocesamineto
@@ -14,18 +14,6 @@ df = pd.read_csv('DataMining/sloth_data.csv')
 df = df[df['tail_length_cm'] > 0]
 print(df.head(2))
 # Transformacion 
-# Variables categóricas y numéricas
-cat_features = ['endangered', 'specie', 'sub_specie']
-num_features = ['claw_length_cm', 'size_cm', 'tail_length_cm', 'weight_kg']
-
-# Crear transformadores para variables categóricas y numéricas
-transformers = [
-    ('num', StandardScaler(), num_features),
-    ('cat', OneHotEncoder(drop='first'), cat_features)
-]
-
-preprocessor = ColumnTransformer(transformers)
-
 # Primero, define las condiciones individuales
 condition1 = (df['tail_length_cm'] <= 2) | (df['weight_kg'] <= 2)
 condition2 = ((2 < df['tail_length_cm']) & (df['tail_length_cm'] <= 4)) | ((2 < df['weight_kg']) & (df['weight_kg'] <= 4))
@@ -43,61 +31,76 @@ sleep = np.where(condition1, 22,
 
 df['sleep'] = sleep
 print(df.head)
-# #Mineria de datos
-# plt.scatter(df['size_cm'], df['weight_kg'], color='black')
-# plt.xlabel('size_cm')
-# plt.ylabel('weight_kg')
-# plt.title('Relacion tamaño y peso')
-# # plt.show()
 
-# # Examinar la relación entre las dimensiones y la clasificación de peligro.
+#Mineria
+#Mineria de datos
+plt.scatter(df['size_cm'], df['weight_kg'], color='black')
+plt.xlabel('size_cm')
+plt.ylabel('weight_kg')
+plt.title('Relacion tamaño y peso')
+plt.show()
+# Examinar la relación entre las dimensiones y la clasificación de peligro.
 # Relación entre el tamaño (size_cm) con la clasificación de peligro
-# critically_endangered = []
-# vulnerable = []
-# least_concern = []
-# for i in range(df.shape[0]):
-#     if df["endangered"].iloc[i] == "critically_endangered":
-#         critically_endangered.append(df["size_cm"].iloc[i])
-#     elif df["endangered"].iloc[i] == "vulnerable":
-#         vulnerable.append(df["size_cm"].iloc[i])
-#     elif df["endangered"].iloc[i] == "least_concern":
-#         least_concern.append(df["size_cm"].iloc[i])
+critically_endangered = []
+vulnerable = []
+least_concern = []
+for i in range(df.shape[0]):
+    if df["endangered"].iloc[i] == "critically_endangered":
+        critically_endangered.append(df["size_cm"].iloc[i])
+    elif df["endangered"].iloc[i] == "vulnerable":
+        vulnerable.append(df["size_cm"].iloc[i])
+    elif df["endangered"].iloc[i] == "least_concern":
+        least_concern.append(df["size_cm"].iloc[i])
 
-# mean_critically = np.mean(critically_endangered)
-# print(
-#     "Promedio de tamaño(cm) de los perezosos que su clasificación de peligro es critica: ",
-#     mean_critically,
-# )
-# mean_vulnerable = np.mean(vulnerable)
-# print(
-#     "Promedio de tamaño(cm) de los perezosos que su clasificación de peligro es vulnerable: ",
-#     mean_vulnerable,
-# )
-# mean_least_concern = np.mean(least_concern)
-# print(
-#     "Promedio de tamaño(cm) de los perezosos que su clasificación de peligro es de menor preocupación: ",
-#     mean_least_concern,
-# )
+mean_critically = np.mean(critically_endangered)
+print(
+    "Promedio de tamaño(cm) de los perezosos que su clasificación de peligro es critica: ",
+    mean_critically,
+)
+mean_vulnerable = np.mean(vulnerable)
+print(
+    "Promedio de tamaño(cm) de los perezosos que su clasificación de peligro es vulnerable: ",
+    mean_vulnerable,
+)
+mean_least_concern = np.mean(least_concern)
+print(
+    "Promedio de tamaño(cm) de los perezosos que su clasificación de peligro es de menor preocupación: ",
+    mean_least_concern,
+)
 
+#Modelado
+#Variables categoricas
+cat_features = ['endangered', 'specie']
+#Crear transformadores para variables categóricas, pasa a 1 y 0
+transformers = [
+    ('cat', OneHotEncoder(drop='first'), cat_features)
+]
+#Usar un prerocesador para guardar las variables transformadas
+preprocessor = ColumnTransformer(transformers)
 
-print(df.head())
-# Dividir los datos en entrenamiento y prueba
-x = df.drop(df.columns[4], axis=1) 
-y = df.columns[4]
-X_train, X_test, Y_train, Y_test = train_test_split(x, y, test_size=0.2, random_state=42)
+# Definir las características (X todo el dataframe) y la variable objetivo (y las especies, clasficiar)
+X = df
+y = df['specie']
 
-# Crear el pipeline y entrenar el modelo de regresión logística
+# Crear un pipeline que incluya el preprocesamiento y el clasificador de árbol de decisiones
 pipeline = Pipeline([
-    ('preprocessor', preprocessor),
-    ('classifier', LogisticRegression())
+    ('preprocessor', preprocessor), 
+    ('classifier', DecisionTreeClassifier(random_state=42))
 ])
 
-pipeline.fit(X_train, Y_train)
+# Dividir los datos en conjuntos de entrenamiento 80% y prueba 20%
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Entrenar el modelo (incluye el preprocesamiento)
+pipeline.fit(X_train, y_train)
+
+# Realizar predicciones en el conjunto de prueba (incluye el preprocesamiento)
 y_pred = pipeline.predict(X_test)
 
-# Evaluar el modelo
-accuracy = accuracy_score(Y_test, y_pred)
-classification_rep = classification_report(Y_test, y_pred)
+# Calcular la precisión y la matriz de confusión
+accuracy = accuracy_score(y_test, y_pred)
+conf_matrix = confusion_matrix(y_test, y_pred)
 
-print(f'Accuracy: {accuracy}')
-print('Classification Report:\n', classification_rep)
+# Imprimir los resultados
+print(f'Accuracy: {accuracy * 100:.2f}%')
+print(f'Confusion Matrix:\n{conf_matrix}')
