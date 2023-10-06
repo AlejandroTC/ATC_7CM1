@@ -2,13 +2,15 @@ package com.imageanalisys;
 
 import java.awt.Image;
 import com.imageanalisys.MEspacial.Basicas;
+import com.imageanalisys.MEspacial.Binarizacion;
 
 public class App {
     public static void main(String[] args) {
         // Abrir una imagen desde un archivo
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                Egrises();
+                binarizar();
+                // egrises();
                 // ilium();
                 // imagenFria();
                 // imagenCalida();
@@ -17,7 +19,7 @@ public class App {
         });
     }
 
-    public static void Egrises() {
+    public static void egrises() {
         Image imagen = HerramientasImagen.abrirImagen();
         // Imagen Original
         JFrameImage original = new JFrameImage(imagen);
@@ -86,5 +88,22 @@ public class App {
         calida.setVisible(true);
         // Histograma imagen iluminada
         HerramientasImagen.calcularHistograma(Basicas.calido(imagen, 20), "Imagen Cálida", 500, 500);
+    }
+
+    public static void binarizar(){
+        Image imagen = HerramientasImagen.abrirImagen();
+        JFrameImage original = new JFrameImage(imagen);
+        original.setSize(500, 500);
+        original.setVisible(true);
+        // Histograma
+        HerramientasImagen.calcularHistograma(imagen, "Original", 0, 500);
+        //HACE ALGO
+        JFrameImage modificado = new JFrameImage(Binarizacion.binarizarImagen(Basicas.escalaDeGrises(imagen), 230));
+        modificado.setSize(500, 500);
+        modificado.setLocation(500, 0);
+        modificado.setVisible(true);
+        // Histograma
+        HerramientasImagen.calcularHistograma(Binarizacion.binarizarImagen(Basicas.escalaDeGrises(imagen), 230), "Binarizacion", 500, 500);
+                
     }
 }
