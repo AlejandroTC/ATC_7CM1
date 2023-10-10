@@ -83,6 +83,43 @@ public class Basicas {
         return ImageColored;
     }
 
+    public static Image negativeGrises(Image original, int m){
+        
+        //To buffer para leer la informacion
+        BufferedImage originalBuffered = HerramientasImagen.toBufferedImage(escalaDeGrises(original));
+        //Recorrer imagen buffereada
+        for(int i=0; i < originalBuffered.getWidth(); i++){
+            for (int j=0; j < originalBuffered.getHeight(); j++){
+                //Obtener color:
+                int valorpix = originalBuffered.getRGB(i, j);
+                Color whatColors = new Color(m - valorpix);
+                whatColors = new Color(validar(whatColors.getRed()), validar(whatColors.getGreen()), validar(whatColors.getBlue()));
+                originalBuffered.setRGB(i, j, whatColors.getRGB());
+            }
+        }
+        Image ImageNegative = HerramientasImagen.toImage(originalBuffered);
+        return ImageNegative;
+    }
+
+    public static Image negative(Image original, int m){
+        
+        //To buffer para leer la informacion
+        BufferedImage originalBuffered = HerramientasImagen.toBufferedImage(original);
+        //Recorrer imagen buffereada
+        for(int i=0; i < originalBuffered.getWidth(); i++){
+            for (int j=0; j < originalBuffered.getHeight(); j++){
+                //Obtener color:
+                int valorpix = originalBuffered.getRGB(i, j);
+                Color whatColors = new Color(m - valorpix);
+                whatColors = new Color(validar(whatColors.getRed()), validar(whatColors.getGreen()), validar(whatColors.getBlue()));
+                originalBuffered.setRGB(i, j, whatColors.getRGB());
+            }
+        }
+        Image ImageNegative = HerramientasImagen.toImage(originalBuffered);
+        return ImageNegative;
+    }
+
+
 
     private static int validar (int i){
         if(i>255) return 255;

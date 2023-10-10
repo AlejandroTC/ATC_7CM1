@@ -9,7 +9,8 @@ public class App {
         // Abrir una imagen desde un archivo
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                binarizar();
+                negativeGrises();
+                // binarizar();
                 // egrises();
                 // ilium();
                 // imagenFria();
@@ -17,6 +18,40 @@ public class App {
 
             }
         });
+    }
+
+    protected static void negativeGrises() {
+        Image imagen = HerramientasImagen.abrirImagen();
+        // Imagen Original
+        JFrameImage original = new JFrameImage(imagen);
+        original.setSize(500, 500);
+        original.setVisible(true);
+        // Histograma
+        HerramientasImagen.calcularHistograma(imagen, "Original", 0, 500);
+        //Imagen en negativo
+        JFrameImage negG = new JFrameImage(Basicas.negativeGrises(imagen, 255));
+        negG.setSize(500, 500);
+        negG.setLocation(500, 0);
+        negG.setVisible(true);
+        // Histograma negativo
+        HerramientasImagen.calcularHistograma(Basicas.negativeGrises(imagen, 255), " Escala de Grises", 500, 500);
+    }
+
+    protected static void negative() {
+        Image imagen = HerramientasImagen.abrirImagen();
+        // Imagen Original
+        JFrameImage original = new JFrameImage(imagen);
+        original.setSize(500, 500);
+        original.setVisible(true);
+        // Histograma
+        HerramientasImagen.calcularHistograma(imagen, "Original", 0, 500);
+        //Imagen en negativo
+        JFrameImage neg = new JFrameImage(Basicas.negative(imagen, 255));
+        neg.setSize(500, 500);
+        neg.setLocation(500, 0);
+        neg.setVisible(true);
+        // Histograma negativo
+        HerramientasImagen.calcularHistograma(Basicas.negative(imagen, 255), " Escala de Grises", 500, 500);
     }
 
     public static void egrises() {
