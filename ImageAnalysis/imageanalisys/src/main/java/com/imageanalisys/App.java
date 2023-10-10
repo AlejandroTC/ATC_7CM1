@@ -10,6 +10,7 @@ public class App {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 negativeGrises();
+                negative();
                 // binarizar();
                 // egrises();
                 // ilium();
@@ -34,7 +35,7 @@ public class App {
         negG.setLocation(500, 0);
         negG.setVisible(true);
         // Histograma negativo
-        HerramientasImagen.calcularHistograma(Basicas.negativeGrises(imagen, 255), " Escala de Grises", 500, 500);
+        HerramientasImagen.calcularHistograma(Basicas.negativeGrises(imagen, 255), "Nevagtivo Escala de Grises", 500, 500);
     }
 
     protected static void negative() {
@@ -51,7 +52,7 @@ public class App {
         neg.setLocation(500, 0);
         neg.setVisible(true);
         // Histograma negativo
-        HerramientasImagen.calcularHistograma(Basicas.negative(imagen, 255), " Escala de Grises", 500, 500);
+        HerramientasImagen.calcularHistograma(Basicas.negative(imagen, 255), "Negativo", 500, 500);
     }
 
     public static void egrises() {
