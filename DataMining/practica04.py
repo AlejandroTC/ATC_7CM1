@@ -7,7 +7,11 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.tree import DecisionTreeClassifier
+<<<<<<< HEAD
 df = pd.read_csv('_sloth_data.csv')
+=======
+df = pd.read_csv('DataMining/sloth_data.csv')
+>>>>>>> 979c79670e56cd22574979086b6d1ba349c33571
 
 # Preaprocesamineto
 # Llenar valores faltantes y eliminar registros con edades errorneas
@@ -31,6 +35,7 @@ sleep = np.where(condition1, 22,
 
 df['sleep'] = sleep
 print(df.head)
+<<<<<<< HEAD
 # Crear un objeto OneHotEncoder
 
 cat_features = ['endangered', 'ssssss']
@@ -53,6 +58,67 @@ pipeline = Pipeline([
 
 # Dividir los datos en conjuntos de entrenamiento y prueba
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+=======
+
+#Mineria
+#Mineria de datos
+plt.scatter(df['size_cm'], df['weight_kg'], color='black')
+plt.xlabel('size_cm')
+plt.ylabel('weight_kg')
+plt.title('Relacion tamaño y peso')
+plt.show()
+# Examinar la relación entre las dimensiones y la clasificación de peligro.
+# Relación entre el tamaño (size_cm) con la clasificación de peligro
+critically_endangered = []
+vulnerable = []
+least_concern = []
+for i in range(df.shape[0]):
+    if df["endangered"].iloc[i] == "critically_endangered":
+        critically_endangered.append(df["size_cm"].iloc[i])
+    elif df["endangered"].iloc[i] == "vulnerable":
+        vulnerable.append(df["size_cm"].iloc[i])
+    elif df["endangered"].iloc[i] == "least_concern":
+        least_concern.append(df["size_cm"].iloc[i])
+
+mean_critically = np.mean(critically_endangered)
+print(
+    "Promedio de tamaño(cm) de los perezosos que su clasificación de peligro es critica: ",
+    mean_critically,
+)
+mean_vulnerable = np.mean(vulnerable)
+print(
+    "Promedio de tamaño(cm) de los perezosos que su clasificación de peligro es vulnerable: ",
+    mean_vulnerable,
+)
+mean_least_concern = np.mean(least_concern)
+print(
+    "Promedio de tamaño(cm) de los perezosos que su clasificación de peligro es de menor preocupación: ",
+    mean_least_concern,
+)
+
+#Modelado
+#Variables categoricas
+cat_features = ['endangered', 'specie']
+#Crear transformadores para variables categóricas, pasa a 1 y 0
+transformers = [
+    ('cat', OneHotEncoder(drop='first'), cat_features)
+]
+#Usar un prerocesador para guardar las variables transformadas
+preprocessor = ColumnTransformer(transformers)
+
+# Definir las características (X todo el dataframe) y la variable objetivo (y las especies, clasficiar)
+X = df
+y = df['specie']
+
+# Crear un pipeline que incluya el preprocesamiento y el clasificador de árbol de decisiones
+pipeline = Pipeline([
+    ('preprocessor', preprocessor), 
+    ('classifier', DecisionTreeClassifier(random_state=42))
+])
+
+# Dividir los datos en conjuntos de entrenamiento 80% y prueba 20%
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+>>>>>>> 979c79670e56cd22574979086b6d1ba349c33571
 
 # Entrenar el modelo (incluye el preprocesamiento)
 pipeline.fit(X_train, y_train)
