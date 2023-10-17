@@ -9,10 +9,11 @@ public class App {
         // Abrir una imagen desde un archivo
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                UmbralAutomatico();
                 // negativeGrises();
                 // negative();
                 // binarizar();
-                binarizar2();
+                // binarizar2();
                 // egrises();
                 // ilium();
                 // imagenFria();
@@ -20,6 +21,25 @@ public class App {
 
             }
         });
+    }
+
+    protected static void UmbralAutomatico() {
+        Image imagen = HerramientasImagen.abrirImagen();
+        // Imagen Original
+        JFrameImage original = new JFrameImage(imagen);
+        original.setSize(500, 500);
+        original.setVisible(true);
+        // Histograma
+        HerramientasImagen.calcularHistograma(imagen, "Original", 0, 500);
+        //HACE ALGO
+        int umbral = HerramientasImagen.obtenerUmbral(Basicas.escalaDeGrises(imagen));
+        JFrameImage modificado = new JFrameImage(Binarizacion.binarizarImagen(Basicas.escalaDeGrises(imagen), umbral));
+        modificado.setSize(500, 500);
+        modificado.setLocation(500, 0);
+        modificado.setVisible(true);
+        // Histograma
+        HerramientasImagen.calcularHistograma(Binarizacion.binarizarImagen(Basicas.escalaDeGrises(imagen), umbral), "Binarizacion", 500, 500);
+           
     }
 
     protected static void negativeGrises() {

@@ -12,6 +12,8 @@ import javax.imageio.ImageIO;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
+import espacial.UmbralAutomatico;
+
 public class HerramientasImagen {
     
     public static Image abrirImagen (){
@@ -99,5 +101,24 @@ public class HerramientasImagen {
         
         graficador.crearGrafica();
         graficador.muestraGrafica(x, y);
+    }
+
+    public static int obtenerUmbral(Image imagen){
+        //Contadores
+        double[] contR = new double[256];
+        double[] contG = new double[256];
+        double[] contB = new double[256];
+        // recorrer los pixeles de la imagen
+        BufferedImage bi = toBufferedImage(imagen);
+        for(int i=0; i<bi.getWidth(); i++){
+            for(int j=0; j<bi.getHeight(); j++){
+                Color thisColor = new Color(bi.getRGB(i, j));
+                contR[thisColor.getRed()] = contR[thisColor.getRed()]+1;
+                contG[thisColor.getGreen()] = contG[thisColor.getGreen()]+1;
+                contB[thisColor.getBlue()] = contB[thisColor.getBlue()]+1;
+            }
+        }
+        int umbral = UmbralAutomatico.metodoIterativo(contR);
+        return umbral;
     }
 }
