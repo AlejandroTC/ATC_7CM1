@@ -50,6 +50,12 @@ ax.set_title("PCA 3 componentes Iris")
 
 plt.show()
 
+# Aplicar PCA
+n_components = 2  # Número de componentes principales
+pca = PCA(n_components=n_components)
+X_r = pca.fit_transform(X)
+
+
 # Visualizar los datos reducidos a 2 dimensiones
 plt.figure()
 colors = ["navy", "turquoise", "darkorange"]
