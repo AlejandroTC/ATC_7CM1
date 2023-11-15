@@ -12,3 +12,4 @@ print(f"\n Data Info")
 print(data.info())  
 print(f"\n Data Describe")
 print(data.describe())  
+
