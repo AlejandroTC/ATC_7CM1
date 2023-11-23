@@ -11,9 +11,9 @@ from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import cross_val_score
 # Carga de datos
-data = pd.read_csv('combined_data.csv')
+data = pd.read_csv('DataMining/combined_data.csv', nrows=5000)
 # Exploracion de datos
-print("Exploración de Datos/n")
+print("Exploración de Datos\n")
 print(f"\n Data Head")
 print(data.head())  
 print(f"\n Data Info")
@@ -22,7 +22,7 @@ print(f"\n Data Describe")
 print(data.describe())  
 
 # Preprocesamiento de Datos
-print("Preprocesamiento de Datos/n")
+print("\n\nPreprocesamiento de Datos\n")
 # Limpieza de datos, eliminar caracteres y transformar a minusculas
 data['text'] = data['text'].apply(lambda x: re.sub('[^a-zA-Z]', ' ', x))  
 data['text'] = data['text'].apply(lambda x: x.lower())
@@ -31,6 +31,9 @@ data.dropna(inplace=True)
 # Vectorización de textos - TF-IDF
 tfidf_vectorizer = TfidfVectorizer()
 tfidf_vectors = tfidf_vectorizer.fit_transform(data['text'])
+print(f"Data Head")
+print(data.head())  
+
 
 # Division de Datos
 X = tfidf_vectors 
@@ -50,8 +53,8 @@ dtree = DecisionTreeClassifier()
 dtree.fit(X_train, y_train)
 
 # Matriz de confusion y metricas de evaluacion
-print("Matriz de confusión y métricas de evaluación/n")
-print("Gaussian Naives Bayes/n")
+print("\n\nMatriz de confusión y métricas de evaluación\n")
+print("Gaussian Naives Bayes\n")
 predictions_nb = gnb.predict(X_test.toarray())
 conf_matrix_nb = confusion_matrix(y_test, predictions_nb)
 accuracy_nb = accuracy_score(y_test, predictions_nb)
@@ -65,7 +68,7 @@ print(f"Precisión (Precision) Naive Bayes: {precision_nb}")
 print(f"Sensibilidad (Recall) Naive Bayes: {recall_nb}")
 print(f"Puntuación F1 (F1 Score) Naive Bayes: {f1_nb}")
 
-print("Support Vector Classification /n")
+print("\nSupport Vector Classification \n")
 predictions_svm = svm.predict(X_test)
 conf_matrix_svm = confusion_matrix(y_test, predictions_svm)
 accuracy_svm = accuracy_score(y_test, predictions_svm)
@@ -79,7 +82,7 @@ print(f"Precisión (Precision) SVM: {precision_svm}")
 print(f"Sensibilidad (Recall) SVM: {recall_svm}")
 print(f"Puntuación F1 (F1 Score) SVM: {f1_svm}")
 
-print("Decision Tree /n")
+print("\nDecision Tree \n")
 predictions_tree = dtree.predict(X_test)
 conf_matrix_tree = confusion_matrix(y_test, predictions_tree)
 accuracy_tree = accuracy_score(y_test, predictions_tree)
@@ -93,32 +96,59 @@ print(f"Precisión (Precision) Árboles de Decisión: {precision_tree}")
 print(f"Sensibilidad (Recall) Árboles de Decisión: {recall_tree}")
 print(f"Puntuación F1 (F1 Score) Árboles de Decisión: {f1_tree}")
 
-# Evaluacion del desempeño 
-print("Validación Cruzada /n")
+# Validación Cruzada
+print("\n\nValidación Cruzada \n")
 # Validación cruzada para Naive Bayes
-scores_nb = cross_val_score(gnb, X, y, cv=5)
+scores_nb = cross_val_score(gnb, X.toarray(), y, cv=5)
 print("Puntuaciones de Validación Cruzada Naive Bayes:")
 print(scores_nb)
+
 # Validación cruzada para SVM
-scores_svm = cross_val_score(svm, X, y, cv=5)
+scores_svm = cross_val_score(svm, X.toarray(), y, cv=5)
 print("Puntuaciones de Validación Cruzada SVM:")
 print(scores_svm)
+
 # Validación cruzada para Árboles de decisión
-scores_tree = cross_val_score(dtree, X, y, cv=5)
+scores_tree = cross_val_score(dtree, X.toarray(), y, cv=5)
 print("Puntuaciones de Validación Cruzada Árboles de Decisión:")
 print(scores_tree)
 
-print("Bootstrap Naives Bayes/n")
+print("\n\nBootstrap\n")
 # Número de iteraciones Bootstrap
 n_iterations = 100
 accuracy_scores_nb = []
+accuracy_scores_svm = []
+accuracy_scores_tree = []
+
 for _ in range(n_iterations):
-    indices = np.random.choice(len(X), len(X), replace=True)
-    X_bootstrap = X[indices]
-    y_bootstrap = y[indices]
-    gnb.fit(X_bootstrap, y_bootstrap)
-    predictions = gnb.predict(X_test)
-    accuracy = accuracy_score(y_test, predictions)
-    accuracy_scores_nb.append(accuracy)
+    indices = np.random.choice(X_train.shape[0], X_train.shape[0], replace=True)
+    X_bootstrap_train = X_train[indices].toarray()
+    y_bootstrap_train = y_train.iloc[indices]
+    
+    # Gaussian Naive Bayes
+    gnb.fit(X_bootstrap_train, y_bootstrap_train)
+    predictions_nb = gnb.predict(X_test.toarray())
+    accuracy_nb = accuracy_score(y_test, predictions_nb)
+    accuracy_scores_nb.append(accuracy_nb)
+
+    # Support Vector Classification
+    if len(np.unique(y_bootstrap_train)) > 1:
+        svm.fit(X_bootstrap_train, y_bootstrap_train)
+        predictions_svm = svm.predict(X_test.toarray())
+        accuracy_svm = accuracy_score(y_test, predictions_svm)
+        accuracy_scores_svm.append(accuracy_svm)
+
+    # Decision Trees
+    dtree.fit(X_bootstrap_train, y_bootstrap_train)
+    predictions_tree = dtree.predict(X_test.toarray())
+    accuracy_tree = accuracy_score(y_test, predictions_tree)
+    accuracy_scores_tree.append(accuracy_tree)
+
 print("Puntuaciones de exactitud (Accuracy) de Bootstrap Naive Bayes:")
 print(accuracy_scores_nb)
+
+print("Puntuaciones de exactitud (Accuracy) de Bootstrap SVM:")
+print(accuracy_scores_svm)
+
+print("Puntuaciones de exactitud (Accuracy) de Bootstrap Decision Trees:")
+print(accuracy_scores_tree)

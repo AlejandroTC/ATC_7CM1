@@ -7,11 +7,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.tree import DecisionTreeClassifier
-<<<<<<< HEAD
-df = pd.read_csv('_sloth_data.csv')
-=======
 df = pd.read_csv('DataMining/sloth_data.csv')
->>>>>>> 979c79670e56cd22574979086b6d1ba349c33571
 
 # Preaprocesamineto
 # Llenar valores faltantes y eliminar registros con edades errorneas
@@ -35,10 +31,9 @@ sleep = np.where(condition1, 22,
 
 df['sleep'] = sleep
 print(df.head)
-<<<<<<< HEAD
 # Crear un objeto OneHotEncoder
 
-cat_features = ['endangered', 'ssssss']
+cat_features = ['endangered', 'specie']
 
 #Crear transformadores para variables categóricas y numéricas
 transformers = [
@@ -47,8 +42,8 @@ transformers = [
 preprocessor = ColumnTransformer(transformers)
 
 # Definir las características (X) y la variable objetivo (y)
-X = df.drop('ssssss', axis=1)  # Asegúrate de usar el nombre de la columna objetivo correcto
-y = df['ssssss']
+X = df.drop('specie', axis=1)  # Asegúrate de usar el nombre de la columna objetivo correcto
+y = df['specie']
 
 # Crear un pipeline que incluya el preprocesamiento y el clasificador de árbol de decisiones
 pipeline = Pipeline([
@@ -58,7 +53,6 @@ pipeline = Pipeline([
 
 # Dividir los datos en conjuntos de entrenamiento y prueba
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
-=======
 
 #Mineria
 #Mineria de datos
@@ -99,37 +93,46 @@ print(
 #Modelado
 #Variables categoricas
 cat_features = ['endangered', 'specie']
+
+
 #Crear transformadores para variables categóricas, pasa a 1 y 0
-transformers = [
-    ('cat', OneHotEncoder(drop='first'), cat_features)
-]
+transformers = [('cat', OneHotEncoder(drop='first'), cat_features)]
+
+
 #Usar un prerocesador para guardar las variables transformadas
 preprocessor = ColumnTransformer(transformers)
+
 
 # Definir las características (X todo el dataframe) y la variable objetivo (y las especies, clasficiar)
 X = df
 y = df['specie']
 
+
 # Crear un pipeline que incluya el preprocesamiento y el clasificador de árbol de decisiones
 pipeline = Pipeline([
-    ('preprocessor', preprocessor), 
-    ('classifier', DecisionTreeClassifier(random_state=42))
+	('preprocessor', preprocessor),
+	('classifier', DecisionTreeClassifier(random_state=42))
 ])
+
 
 # Dividir los datos en conjuntos de entrenamiento 80% y prueba 20%
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
->>>>>>> 979c79670e56cd22574979086b6d1ba349c33571
+
 
 # Entrenar el modelo (incluye el preprocesamiento)
 pipeline.fit(X_train, y_train)
 
+
 # Realizar predicciones en el conjunto de prueba (incluye el preprocesamiento)
 y_pred = pipeline.predict(X_test)
+
 
 # Calcular la precisión y la matriz de confusión
 accuracy = accuracy_score(y_test, y_pred)
 conf_matrix = confusion_matrix(y_test, y_pred)
 
+
 # Imprimir los resultados
 print(f'Accuracy: {accuracy * 100:.2f}%')
 print(f'Confusion Matrix:\n{conf_matrix}')
+

@@ -1,66 +1,43 @@
-import pandas as pd
+# Importa las bibliotecas necesarias
+from matplotlib import pyplot as plt
 import numpy as np
-from sklearn.compose import ColumnTransformer
-from sklearn.discriminant_analysis import StandardScaler
+import pandas as pd
+import seaborn as sns
 from sklearn.model_selection import train_test_split
-from sklearn.pipeline import Pipeline
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score, precision_score, recall_score
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
+# Carga de datos
+data = pd.read_csv('DataMining/BreastCancerWisconsin.csv')
 
-df = pd.read_csv("Pokemon.csv")
-#Ver los primeros datos del DataFrame
-print("\n DataFrame Original:")
-print(df)
+# Transformacion de Diagnosis a Binario
+data['diagnosis'] = data['diagnosis'].replace('B', 0).replace('M', 1)
 
-#Se utilizo el metodo replace de la funcion pandas para poder remplazar por categorizacion la columna Type 1
-#Bug : 1, Dark : 2, Dragon : 3, Electric : 4, Fairy : 5, Fighting : 6,
-#Fire : 7, Flying : 8, Ghost : 9, Grass : 10, Ground : 11, Ice : 12,
-#Normal : 13, Poison : 14, Psychic : 15, Rock : 16, Steel : 17,Water : 18,
-dfcat = df.replace({"Bug" : 1, "Dark" : 2, "Dragon" : 3, 
-                    "Electric" : 4, "Fairy" : 5, "Fighting" : 6,"Fire" : 7, 
-                    "Flying" : 8, "Ghost" : 9, "Grass" : 10, "Ground" : 11, 
-                    "Ice" : 12,"Normal" : 13, "Poison" : 14, "Psychic" : 15, 
-                    "Rock" : 16, "Steel" : 17,"Water" : 18,})
-print("\n DataFrame categorizado (Type 1 y 2):")
-print(dfcat)
+# Analizar correlacion
+predictor_variables = ["radius_mean", "texture_mean", "perimeter_mean", "area_mean", "smoothness_mean", "compactness_mean", "concavity_mean", "concave points_mean", "symmetry_mean", "fractal_dimension_mean", "radius_se", "texture_se", "perimeter_se", "area_se", "smoothness_se", "compactness_se", "concavity_se", "concave points_se", "symmetry_se", "fractal_dimension_se", "radius_worst", "texture_worst", "perimeter_worst", "area_worst", "smoothness_worst", "compactness_worst", "concavity_worst", "concave points_worst", "symmetry_worst", "fractal_dimension_worst"]
+target_variable = 'diagnosis'
+correlation_matrix = data[predictor_variables + [target_variable]].corr()
 
-dfcat.drop('Type 2', axis=1)
-    
-#Modelado
-# Features: 'HP', 'Attack', 'Defense', 'Sp. Atk', 'Sp. Def', 'Speed'
-X = dfcat[['HP', 'Attack', 'Defense', 'Sp. Atk', 'Sp. Def', 'Speed']]
-# Target: Type 1
-y = dfcat['Type 1']
+# Variables con correlacion más fuertes
+strong_correlations = correlation_matrix['diagnosis'][abs(correlation_matrix['diagnosis']) > 0.7].index
 
-# Dividir el conjunto de datos en un conjunto de entrenamiento y un conjunto de prueba
+# Dividir el conjunto de datos
+X = data[strong_correlations].drop('diagnosis', axis=1)
+y = data['diagnosis']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-# Implementar y entrenar el modelo de Árbol de Decisiones
-clf = DecisionTreeClassifier(random_state=42)
-clf.fit(X_train, y_train)
 
-# Realizar predicciones en el conjunto de prueba (incluye el preprocesamiento)
-y_pred = clf.predict(X_test)
+# Entrenar regresion logistica
+modelo = LogisticRegression()
+modelo.fit(X_train, y_train)
 
-# Calcular la precisión y la matriz de confusión
+# Realizar predicciones en el conjunto de prueba
+y_pred = modelo.predict(X_test)
+
+# Evaluar el rendimiento del modelo
 accuracy = accuracy_score(y_test, y_pred)
-conf_matrix = confusion_matrix(y_test, y_pred)
+precision = precision_score(y_test, y_pred)
+recall = recall_score(y_test, y_pred)
 
-# Imprimir los resultados
-print(f'Accuracy: {accuracy * 100:.2f}%')
-print(f'Confusion Matrix:\n{conf_matrix}')
-
-#Permitimos la entrada de nuevas observaciones y utilizar ambos modelos para predecir el tipo de pokemon mediante la terminal
-print("Ingrese los numeros (solo seis) de la siguiente forma 'HP Attack Defense Sp. Atk Sp. Def Speed")
-n = 6 # Permite solo el ingreso de 6 numeros
-arr = input()   # Array para almacenar los numeros
-nueva_observación = list(map(float,arr.split(' '))) # separamos por espacio los números y encontramos ['2','3','6','6','5','5']
-tipo_pred_reg_log = predecir_tamaño(reg_log, nueva_observación)
-tipo_pred_clf_log = predecir_tamaño(clf, nueva_observación)
-
-    
-resultado_tipo1 = type1(tipo_pred_reg_log)
-resultado_tipo2 = type2(tipo_pred_clf_log)
-print(f'Tipo de Pokemon predicho por Regresión Logística: {resultado_tipo1}')
-print(f'Tipo de Pokemon predicho por Árbol de Decisiones: {resultado_tipo2}')
+print(f"Accuracy: {accuracy}")
+print(f"Precision: {precision}")
+print(f"Recall: {recall}")
