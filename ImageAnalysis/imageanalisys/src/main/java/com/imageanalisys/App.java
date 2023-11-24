@@ -9,7 +9,7 @@ public class App {
         // Abrir una imagen desde un archivo
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                UmbralAutomatico();
+                //UmbralAutomatico();
                 // negativeGrises();
                 // negative();
                 // binarizar();
@@ -18,6 +18,12 @@ public class App {
                 // ilium();
                 // imagenFria();
                 // imagenCalida();
+
+
+                //Convolucion
+                //Mascara
+                //Ruido
+                
 
             }
         });
